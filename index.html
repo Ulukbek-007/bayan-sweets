@@ -153,42 +153,59 @@
     </section>
 
   </main>
-	<section id="order-form" class="bg-white shadow p-6 rounded max-w-3xl mx-auto my-8">
+	
+<section id="order-form" class="bg-white shadow p-6 rounded max-w-3xl mx-auto my-8">
+<div id="success-message" class="mt-4 text-green-700 font-semibold text-center hidden">
+  Сіздің тапсырысыңыз қабылданды, жақын арада Баян әже немесе оның көмекшілері Сізбен байланысатын болады! 😊
+</div>
   <h2 class="text-2xl font-bold mb-4 text-center">Тапсырыс беру формасы</h2>
   <form id="sweets-order-form">
-
     <div class="mb-4">
       <label class="block font-semibold mb-1">Атыңыз:</label>
       <input type="text" name="user_name" required class="w-full border p-2 rounded" />
     </div>
-
     <div class="mb-4">
       <label class="block font-semibold mb-1">Телефон нөміріңіз:</label>
       <input type="tel" name="user_phone" required class="w-full border p-2 rounded" />
     </div>
-
     <div id="product-selections" class="space-y-4">
       <!-- Бірінші өнім таңдауы осы жерде пайда болады -->
     </div>
-
     <div id="add-more-question" class="my-4 hidden">
       <p class="mb-2 font-semibold">Тағы да ассортимент таңдауды қалайсыз ба?</p>
       <label class="mr-4"><input type="radio" name="more" value="yes"> Иә</label>
       <label><input type="radio" name="more" value="no"> Жоқ</label>
     </div>
-
     <div id="final-part" class="hidden">
       <div class="mb-4">
         <label class="block font-semibold mb-1">Ескертулер:</label>
         <textarea name="notes" class="w-full border p-2 rounded" rows="3"></textarea>
       </div>
-
       <button type="submit" class="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-700">
         Тапсырысты жіберу
       </button>
     </div>
   </form>
 </section>
+
+<!-- Байланыс бөлімі -->
+<section id="contact" class="bg-amber-100 shadow p-6 rounded max-w-3xl mx-auto my-8">
+  <h2 class="text-2xl font-bold mb-4 text-center">Байланыс</h2>
+  <div class="text-center space-y-2">
+    <p><strong>Телефон:</strong> +7 (701) 684-02-02</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/77016840202" class="text-blue-600 underline">Чатқа өту</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/bayan_tatti" target="_blank" class="text-pink-600 underline">@bayan_tatti</a></p>
+    <p><strong>Кері байланыс формасы:</strong> <a href="mailto:pustojrustoj@gmail.com" class="text-blue-600 underline">Хат жазу</a></p>
+  </div>
+</section>
+
+<!-- Автор туралы бөлім (footer) -->
+<footer class="bg-gray-800 text-white text-center py-4 mt-12">
+  <p class="text-sm">
+    Веб-сайт авторы: <strong>Яраш Ұлықбек</strong> | Тел: <a href="tel:+77788426207" class="underline">+7 778 842 6207</a> | Email: <a href="mailto:pustojrustoj@gmail.com" class="underline">pustojrustoj@gmail.com</a>
+  </p>
+</footer>
+
 
   <!-- Скрипт қосу -->
   <script src="script.js"></script>

@@ -125,13 +125,15 @@ document.getElementById('order-form').addEventListener('submit', function(e) {
     }
   });
 
-  // EmailJS арқылы жіберу
-  emailjs.send("your_service_id", "your_template_id", {
+  
+
+emailjs.send('your_service_id', 'your_template_id', {
     user_name: name,
     user_phone: phone,
-    order_list: orderList.join('\n'),
-    note: note
-  })
+    note: note,
+    order_list: orderList
+})
+
   .then(function(response) {
     alert("Тапсырысыңыз сәтті жіберілді!");
     document.getElementById('order-form').reset();
@@ -169,10 +171,13 @@ document.getElementById("order-form").addEventListener("submit", function(e) {
   };
 
   emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-    .then(function(response) {
-       alert("Тапсырысыңыз сәтті жіберілді!");
-    }, function(error) {
-       alert("Қате орын алды: " + JSON.stringify(error));
-    });
+  .then(function(response) {
+    document.getElementById("order-form").reset(); // форманы тазалау
+    const msg = document.getElementById("success-message");
+    msg.classList.remove("hidden"); // хабарламаны көрсету
+    msg.scrollIntoView({ behavior: "smooth" }); // автоматты төмен жылжыту
+  }, function(error) {
+    alert("Қате орын алды: " + JSON.stringify(error));
+  });
 });
 
