@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <title>Баян әженің тәттілері</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-amber-200 p-4 text-center">
+    <h1 class="text-3xl font-bold">Баян әженің тәттілері</h1>
+    <p class="italic">Әр үйге оңай жетсін!</p>
+  </header>
+
+  <!-- Өнімдер навигациясы -->
+  <nav class="flex justify-center gap-4 my-6">
+    <button onclick="showCategory('confet')" class="bg-pink-600 text-white px-4 py-2 rounded">Конфеттер</button>
+    <button onclick="showCategory('pechen')" class="bg-pink-600 text-white px-4 py-2 rounded">Печенье</button>
+    <button onclick="showCategory('vafli')" class="bg-pink-600 text-white px-4 py-2 rounded">Вафли</button>
+    <button onclick="showCategory('basqa')" class="bg-pink-600 text-white px-4 py-2 rounded">Басқа тәттілер</button>
+  </nav>
+
+  <!-- Категориялар -->
+  <main class="p-4">
+
+    <!-- Конфеттер -->
+    <section id="confet" class="category-section product-type">
+      <h2 class="text-xl font-semibold text-center mb-4">Конфеттер</h2>
+
+      <!-- Ел таңдау -->
+      <div class="flex justify-center gap-4 mb-6">
+        <button onclick="showCountry('kz')" class="bg-rose-500 text-white px-4 py-2 rounded">Қазақстан</button>
+        <button onclick="showCountry('tr')" class="bg-rose-500 text-white px-4 py-2 rounded">Түркия</button>
+        <button onclick="showCountry('ir')" class="bg-rose-500 text-white px-4 py-2 rounded">Иран</button>
+        <button onclick="showCountry('ru')" class="bg-rose-500 text-white px-4 py-2 rounded">Ресей</button>
+      </div>
+
+      <!-- Елдер бойынша ішкі контент -->
+
+      <!-- Қазақстан -->
+      <div id="kz" class="country-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/Altyn-kum.jpg" alt="Алтын құм" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Алтын құм</h3>
+          <p>Фирма: ЛОТТЕ Рахат</p>
+          <p>Бағасы: 4000 ₸</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/Rakhat.jpg" alt="Рахат" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Рахат</h3>
+          <p>Фирма: ЛОТТЕ Рахат</p>
+          <p>Бағасы: 4000 ₸</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/красный мак.jpg" alt="Красный мак" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Красный мак</h3>
+          <p>Фирма: BAYAN SULU</p>
+          <p>Бағасы: 3500 ₸</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/matis.jpg" alt="Матис" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Матис</h3>
+          <p>Фирма: BAYAN SULU</p>
+          <p>Бағасы: 2200 ₸</p>
+        </div>
+      </div>
+
+      <!-- Түркия -->
+      <div id="tr" class="country-section hidden">
+        <h3 class="text-xl font-bold mb-4">Түрік конфеттері</h3>
+        <div class="bg-white shadow p-4 rounded text-center w-full sm:w-[300px]">
+          <img src="img/albeni.jpg" alt="Albeni" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Albeni</h3>
+          <p>Фирма: ULKER</p>
+          <p>Бағасы: 5500 ₸</p>
+        </div>
+      </div>
+
+      <!-- Иран -->
+      <div id="ir" class="country-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+       	<div class="bg-white shadow p-4 rounded text-center w-full sm:w-[300px]">
+          <img src="img/aisuda-love.jpg" alt="Aysuda Love" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Aysuda Love</h3>
+          <p>Фирма: Aysuda </p>
+          <p>Бағасы: 2800 ₸</p>
+        </div> 
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/aisuda-bag.jpg" alt="Aysuda Bag" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Aysuda Bag</h3>
+          <p>Фирма: Aysuda </p>
+          <p>Бағасы: 3000 ₸</p>
+        </div>
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/Achachi-egg.jpeg" alt="Achachi" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Achachi egg</h3>
+          <p>Фирма: Achachi </p>
+          <p>Бағасы: 3500 ₸</p>
+        </div>
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/merosa.jpeg" alt="Merosa" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Merosa</h3>
+          <p>Фирма: Merosa </p>
+          <p>Бағасы: 2500 ₸</p>
+        </div>
+      </div>
+
+      <!-- Ресей -->
+      <div id="ru" class="country-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+       	<div class="bg-white shadow p-4 rounded text-center w-full sm:w-[300px]">
+          <img src="img/fine-gold-999-ATAG.jpg" alt="Fine Gold 999,9" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Fine Gold 999,9</h3>
+          <p>Фирма: АтАг шексна </p>
+          <p>Бағасы: 4500 ₸</p>
+        </div> 
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/zabegai-na-chai.png" alt="Забегай на чай" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Забегай на чай</h3>
+          <p>Фирма: АтАг шексна </p>
+          <p>Бағасы: 4000 ₸</p>
+        </div>
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/s-novim-godom.jpg" alt="С новым годом" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">С новым годом</h3>
+          <p>Фирма: АтАг шексна </p>
+          <p>Бағасы: 3500 ₸</p>
+        </div>
+	<div class="bg-white shadow p-4 rounded text-center">
+          <img src="img/lihoradka.jpg" alt="Конфетная лихорадка" class="w-full h-40 object-contain mb-2">
+          <h3 class="font-semibold">Конфетная лихорадка</h3>
+          <p>Фирма: АтАг шексна </p>
+          <p>Бағасы: 4000 ₸</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Печенье -->
+    <section id="pechen" class="category-section product-type hidden">
+      <h2 class="text-xl font-semibold mb-4">Печенье</h2>
+      <p class="text-center">Мұнда печенье ассортимені болады</p>
+    </section>
+
+    <!-- Вафли -->
+    <section id="vafli" class="category-section product-type hidden">
+      <h2 class="text-xl font-semibold mb-4">Вафли</h2>
+      <p class="text-center">Мұнда вафли ассортимені болады</p>
+    </section>
+
+    <!-- Басқа -->
+    <section id="basqa" class="category-section product-type hidden">
+      <h2 class="text-xl font-semibold mb-4">Басқа тәттілер</h2>
+      <p class="text-center">Мұнда басқа тәттілер болады</p>
+    </section>
+
+  </main>
+	<section id="order-form" class="bg-white shadow p-6 rounded max-w-3xl mx-auto my-8">
+  <h2 class="text-2xl font-bold mb-4 text-center">Тапсырыс беру формасы</h2>
+  <form id="sweets-order-form">
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Атыңыз:</label>
+      <input type="text" name="user_name" required class="w-full border p-2 rounded" />
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-semibold mb-1">Телефон нөміріңіз:</label>
+      <input type="tel" name="user_phone" required class="w-full border p-2 rounded" />
+    </div>
+
+    <div id="product-selections" class="space-y-4">
+      <!-- Бірінші өнім таңдауы осы жерде пайда болады -->
+    </div>
+
+    <div id="add-more-question" class="my-4 hidden">
+      <p class="mb-2 font-semibold">Тағы да ассортимент таңдауды қалайсыз ба?</p>
+      <label class="mr-4"><input type="radio" name="more" value="yes"> Иә</label>
+      <label><input type="radio" name="more" value="no"> Жоқ</label>
+    </div>
+
+    <div id="final-part" class="hidden">
+      <div class="mb-4">
+        <label class="block font-semibold mb-1">Ескертулер:</label>
+        <textarea name="notes" class="w-full border p-2 rounded" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-700">
+        Тапсырысты жіберу
+      </button>
+    </div>
+  </form>
+</section>
+
+  <!-- Скрипт қосу -->
+  <script src="script2.js"></script>
+</body>
+</html>
